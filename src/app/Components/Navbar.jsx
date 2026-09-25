@@ -80,22 +80,22 @@ const Navbar = () => {
       {/* Main Navbar - Sticky */}
       <header className="sticky top-0 left-0 right-0 z-50 w-full bg-white shadow-md border-b border-gray-200 backdrop-blur-sm bg-white/95">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex">
               <img
                 src="/hemufooterlogo.png"
                 alt="Logo"
-                className="h-16 object-contain"
+                className="h-12 object-contain"
               />
             </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8 font-sans font-bold">
               {navLinks.slice(0, 3).map((link, index) => (
-                <a 
-                  key={index} 
-                  href={link.href} 
+                <a
+                  key={index}
+                  href={link.href}
                   className={`nav-link ${link.isActive ? 'active' : ''}`}
                 >
                   {link.label}
@@ -109,9 +109,8 @@ const Navbar = () => {
                   onClick={() => handleDropdownToggle("projects")}
                 >
                   <span>Our Projects</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                    activeDropdown === "projects" ? "rotate-180" : ""
-                  }`} />
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === "projects" ? "rotate-180" : ""
+                    }`} />
                 </button>
 
                 {activeDropdown === "projects" && (
@@ -159,9 +158,9 @@ const Navbar = () => {
 
               {/* Remaining navigation links after Projects */}
               {navLinks.slice(3).map((link, index) => (
-                <a 
-                  key={index + 3} 
-                  href={link.href} 
+                <a
+                  key={index + 3}
+                  href={link.href}
                   className={`nav-link ${link.isActive ? 'active' : ''}`}
                 >
                   {link.label}
@@ -211,9 +210,9 @@ const Navbar = () => {
               <div className="flex flex-col space-y-3">
                 {/* Mobile Navigation Links - Following exact desktop sequence */}
                 {navLinks.slice(0, 3).map((link, index) => (
-                  <a 
-                    key={index} 
-                    href={link.href} 
+                  <a
+                    key={index}
+                    href={link.href}
                     className={`mobile-nav-link ${link.isActive ? 'active' : ''}`}
                     onClick={closeMobileMenu}
                   >
@@ -228,9 +227,8 @@ const Navbar = () => {
                     onClick={() => handleDropdownToggle("mobileProjects")}
                   >
                     <span>Our Projects</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === "mobileProjects" ? "rotate-180" : ""
-                    }`} />
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === "mobileProjects" ? "rotate-180" : ""
+                      }`} />
                   </button>
 
                   {activeDropdown === "mobileProjects" && (
@@ -275,9 +273,9 @@ const Navbar = () => {
 
                 {/* Remaining Mobile Navigation Links - After projects */}
                 {navLinks.slice(3).map((link, index) => (
-                  <a 
-                    key={index + 3} 
-                    href={link.href} 
+                  <a
+                    key={index + 3}
+                    href={link.href}
                     className={`mobile-nav-link ${link.isActive ? 'active' : ''}`}
                     onClick={closeMobileMenu}
                   >
