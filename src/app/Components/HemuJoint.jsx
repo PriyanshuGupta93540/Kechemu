@@ -5,12 +5,14 @@ import AgriDairy from './AgriDairy';
 const HemuJoint = () => {
     const partnerCompanies = [
         {
+            name: "UCDF",
             logoSrc: "/ucdflogo.avif",
             specialty: "Dairy Processing & Distribution",
             description: "Modern dairy processing facilities, quality control, and supply chain management",
             color: "bg-green-600"
         },
         {
+            name: "KEC",
             logoSrc: "/keclogo.png",
             specialty: "Farm To Fuel",
             description: "Advanced IoT sensors, precision agriculture, and crop optimization systems",
@@ -19,7 +21,7 @@ const HemuJoint = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-green-50 to-yellow-50 p-4 sm:p-6">
+        <div className="min-h-screen bg-gradient-to-br from-green-50 to-yellow-50 p-4 sm:p-6 overflow-x-hidden">
             <div className="max-w-7xl mx-auto">
                 {/* Header Section */}
                 <div className="text-center mb-8">
@@ -34,7 +36,7 @@ const HemuJoint = () => {
                     </div>
 
                     <div className="relative text-center py-4 sm:py-8 rounded-2xl w-full max-w-[800px] mx-auto px-4">
-                        <h1 className="text-2xl sm:text-4xl lg:text-6xl font-extrabold text-green-700 drop-shadow-md">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-green-700 drop-shadow-md break-words">
                             Hemu Joint{" "}
                             <span className="text-yellow-400">Ventures</span>
                         </h1>
@@ -49,30 +51,28 @@ const HemuJoint = () => {
 
                 {/* Partnership Structure */}
                 <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-8 mb-12 border border-gray-100">
-                    <div className="flex items-center justify-center mb-8">
-                        <div className="flex items-center space-x-4">
-                            <Building2 className="w-6 h-6 text-green-600" />
-                            <span className="text-base sm:text-lg font-semibold text-gray-700 text-center">Joint Venture Structure</span>
-                            <Users className="w-6 h-6 text-yellow-500" />
-                        </div>
+                    <div className="flex items-center justify-center flex-wrap gap-3 mb-8 text-center">
+                        <Building2 className="w-6 h-6 text-green-600 shrink-0" />
+                        <span className="text-base sm:text-lg font-semibold text-gray-700">Joint Venture Structure</span>
+                        <Users className="w-6 h-6 text-yellow-500 shrink-0" />
                     </div>
 
                     <div className="flex items-center justify-center mb-8 relative">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl w-full">
                             {partnerCompanies.map((partner, index) => (
-                                <div key={index} className="relative">
-                                    <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 sm:p-10 lg:p-16 border border-gray-200 hover:shadow-md transition-all duration-300">
+                                <div key={index} className="relative h-full">
+                                    <div className="h-full bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 sm:p-8 md:p-10 lg:p-12 border border-gray-200 hover:shadow-md transition-all duration-300">
                                         <div className="text-center mb-4">
                                             <img
                                                 src={partner.logoSrc}
                                                 alt={`${partner.name} Logo`}
                                                 className="w-32 h-14 sm:w-48 sm:h-16 md:w-56 md:h-20 object-contain mx-auto"
                                             />
-                                            <h3 className="text-2xl sm:text-4xl lg:text-7xl font-bold text-gray-600 mt-2 break-words">
+                                            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-600 mt-2 break-words">
                                                 {partner.name}
                                             </h3>
                                             <div
-                                                className={`inline-block px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-white text-sm sm:text-lg font-sans font-medium ${partner.color} mt-2`}
+                                                className={`inline-block px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-white text-sm sm:text-base md:text-lg font-sans font-medium ${partner.color} mt-2`}
                                             >
                                                 {partner.specialty}
                                             </div>
@@ -85,7 +85,7 @@ const HemuJoint = () => {
                             ))}
                         </div>
 
-                        <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center">
+                        <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center">
                             <div className="bg-white rounded-full p-4 shadow-lg border-2 border-gray-200">
                                 <span className="text-3xl font-bold text-gray-600">+</span>
                             </div>
