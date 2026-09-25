@@ -25,10 +25,10 @@ const Home = () => {
     <div>
       <Navbar />
       <Herohome />
-      <HemuJoint/>
+      {/* <HemuJoint/> */} 
       {/* <HistoryandImp /> */}
       {/* <Homefocusareas /> */}
-      <Biogasdistri />
+      {/* <Biogasdistri /> */}
       <ChallengesFaced />
       <ObjectivesofHemu />
       <WhatNext />

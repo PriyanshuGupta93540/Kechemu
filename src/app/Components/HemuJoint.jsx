@@ -38,7 +38,7 @@ const HemuJoint = () => {
                     <div className="relative text-center py-4 sm:py-8 rounded-2xl w-full max-w-[800px] mx-auto px-4">
                         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-green-700 drop-shadow-md break-words">
                             Hemu Joint{" "}
-                            <span className="text-yellow-400">Ventures</span>
+                            <span className="text-yellow-400">Venturesggg</span>
                         </h1>
                     </div>
                     <p className="text-base sm:text-lg text-gray-600 font-medium mb-4 px-4">
